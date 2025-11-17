@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title> Σχετικά </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="contactStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttonContainer">
+            <ul class="buttonList">
+                <li> <a href="../index.html"> <span> Αρχική </span> </a> </li>
+                <li> <a href="about.html"> <span> Σχετικά </span> </a> </li>
+                <li> <a href="interests.html"> <span> Ενδιαφέροντα </span> </a> </li>
+                <li> <a href="projects.html"> <span> Projects </span> </a> </li>
+                <li> <a style="color:#000080"> <span> Επικοινωνία </span> </a> </li>
+            </ul>
+        </div>
+
+        <div class="contactBanner"> 
+            <h1> Επικοινωνία </h1>
+            <br>
+            <p> Επικοινωνήστε μαζί μου με ένα μήνυμα το πολύ 100 χαρακτήρων. </p>
+        </div>
+    
+        <div class="contactArea">
+            <input id="email" type="text" placeholder="Email">
+            <br>
+            <input id="name" type="text" placeholder="Όνομα">
+            <br>
+            <textarea id="text" placeholder="Πληκτρολόγησε..."></textarea>
+            <br>
+            <input id="button" type="button" value="Στείλτε" onmousedown="send_message()"> 
+            <br>
+            <p id="errorMessage"> </p>
+        </div>
+
+    </div>
+
+    <script>
+        function send_message() {
+            if (document.getElementById("email").value!="" && document.getElementById("name").value!="" && document.getElementById("text").value!="") {
+                if (document.getElementById("text").value.length<=100) {
+                    document.getElementById("errorMessage").style.color="green"
+                    document.getElementById("errorMessage").innerHTML="Το μήνυμα στάλθηκε επιτυχώς."
+                }
+
+                else {
+                    document.getElementById("errorMessage").style.color="red"
+                    document.getElementById("errorMessage").innerHTML="Το μήνυμα υπερβαίνει τους 100 χαρακτήρες."
+                }
+            }
+            else {
+                document.getElementById("errorMessage").style.color="red"
+                document.getElementById("errorMessage").innerHTML="Δεν συμπληρώθηκαν όλα τα πεδία."
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

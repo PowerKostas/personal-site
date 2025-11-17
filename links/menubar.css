@@ -1,0 +1,32 @@
+body {
+    margin:0;
+}
+
+.buttonContainer {
+    width:100%;
+    background:rgb(200,200,200);
+    border-bottom:2px solid #000000;
+    font-family:'Verdana',sans-serif;
+    text-align:center;
+    overflow: hidden;
+}
+
+.buttonList {
+    margin-right:115px;
+}
+
+.buttonList li {
+    display:inline; 
+}
+
+.buttonList a {
+    display:inline-block;
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    font-size:20px;
+    margin-left:75px;    
+}
+
+.buttonList a:hover {
+    color:#000080;
+}
